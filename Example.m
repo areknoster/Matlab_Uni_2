@@ -7,3 +7,5 @@ x= linspace(-5, 5, 12);
 fplot(f, 'g');
 hold on
 fplot(@sin, 'r');
+
+findN(-5, 5, 10, 5, @sin, 0.000001);
