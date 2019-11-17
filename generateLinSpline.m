@@ -14,7 +14,6 @@ Y = f(X);
             relV = ((i - a) .* n) ./ (b - a);
             low = floor(relV);
             up = ceil(relV);
-            %fprintf("x: %f relV: %f low: %d up: %d\n",x, relV, low, up);
             if low == up
                 y(j) = Y(low + 1);
             else
