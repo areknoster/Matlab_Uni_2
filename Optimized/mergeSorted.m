@@ -1,6 +1,5 @@
 function [r] = mergeSorted(a,inds, mids)
-%MERGESORTED Summary of this function goes here
-%   Detailed explanation goes here
+%MERGESORTED Merges array a and mids elements with indexes inds
 r = zeros(1, length(a) + length(inds));
 ai = 1; ri = 1;
 for bi = inds

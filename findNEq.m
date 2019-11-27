@@ -1,13 +1,13 @@
-function [spline, tab] = findNEq(X, f, inc, eps, maxIter)
+function [tab] = findNEq(X, f, inc, eps, maxIter)
 %FIND finds the minimal number of equally spaced data points for spline of
 %f to have the max error of spline smaller than eps
-%   X is the domain on which we'd like to interpolate.
+%   a, b is the domain of f we'd like to check
+%   n is the number of data points we'd like to begin with
+%   inc is the increment of n at each try
 %   f is function to interpolate
 %   eps is the maxium error we'd like to get in the end.
-%   spline is spline function which has maxium errror smaller than eps
-%   n is the number of data points needed to get correct spline
-%   tab is table - report of the process of computation. 
-errMax = inf;
+%   maxIter is the maximum amount of iterations to perform
+%   tab is returned table - report of the process of computation. 
 tab = table();
 for q = 1:maxIter
     tic
