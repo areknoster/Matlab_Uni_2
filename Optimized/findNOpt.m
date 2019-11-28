@@ -15,6 +15,7 @@ for i = 1:maxIter
     spline = genLinSplin(X, Y);
     mids = X(1:end-1) + diff(X) / 2;
     res = abs(f(mids) - spline(mids));
+    
     errMax  = max(res);
 %VIZ
 %   XN = linspace(X(1), X(end), length(X));
